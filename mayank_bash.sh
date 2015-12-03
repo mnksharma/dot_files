@@ -19,3 +19,7 @@ export PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m
 
 # Light Background
 #export PS1="[\[$(tput sgr0)\]\[\033[38;5;196m\]\u\[$(tput sgr0)\]\[\033[38;5;0m\]@\[$(tput sgr0)\]\[\033[38;5;4m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;6m\]\T\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;0m\]]\\$ \[$(tput sgr0)\]"
+
+function dusorted(){
+    for i in G M K; do du -ah --max-depth=1 | grep [0-9]$i | sort -nr -k 1; done
+}
