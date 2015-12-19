@@ -23,3 +23,13 @@ export PS1="\[\e[00;37m\][\[\e[0m\]\[\e[00;31m\]\u\[\e[0m\]\[\e[00;37m\]@\[\e[0m
 function dusorted(){
     for i in G M K; do du -ah --max-depth=1 | grep [0-9]$i | sort -nr -k 1; done
 }
+
+function mkcd (){
+    if [ ! -n "$1" ]; then
+        echo "Enter a directory name"
+    elif [ -d $1 ]; then
+        echo "\`$1' already exists"
+    else
+        mkdir $1 && cd $1
+    fi
+}
