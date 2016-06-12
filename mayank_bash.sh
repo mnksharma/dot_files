@@ -1,6 +1,7 @@
 echo "Loading Mayank's Bash settings"
 export EDITOR=vim
 export LANG=en_GB.UTF-8
+export TERM=screen-256color-bce
 alias grep='grep --color=auto'
 alias ll="ls --color='always' -al"
 alias ls="ls --color='always'"
