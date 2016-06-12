@@ -5,6 +5,7 @@ echo "Loading Mayank's Bash settings"
 export HISTCONTROL='ignoredups'
 export EDITOR=vim
 export LANG=en_GB.UTF-8
+export TERM=screen-256color
 
 alias grep='grep --color=auto'
 alias ll="ls --color='always' -al"
