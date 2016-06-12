@@ -13,7 +13,6 @@ set laststatus=2
 let g:NERDTreeDirArrows=0
 set encoding=utf-8
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " -> Indentation 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -24,13 +23,11 @@ set shiftwidth=4
 set softtabstop=4
 autocmd FileType cpp setlocal sw=2 ts=2 sts=2 expandtab
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " -> Swaps and Backups
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " -> Key Bindings 
@@ -47,7 +44,10 @@ cmap W w
 cmap Q q
 nnoremap <leader>rv :source $MYVIMRC<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
-
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " -> Vundle
@@ -62,6 +62,12 @@ Bundle 'octol/vim-cpp-enhanced-highlight'
     Plugin 'godlygeek/tabular'
     Plugin 'scrooloose/nerdtree'
     Plugin 'nathanaelkane/vim-indent-guides'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'MarcWeber/vim-addon-mw-utils'
+    Plugin 'tomtom/tlib_vim'
+    Plugin 'garbas/vim-snipmate'
+    Plugin 'honza/vim-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -73,4 +79,9 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 let g:solarized_contrast="high"
-set listchars=tab:▸\ ,eol:¬
+
+" Vim Airline settings
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'powerlineish'
